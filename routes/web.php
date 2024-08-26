@@ -34,6 +34,11 @@ Route::get('/jobs/{id}', function (int $id) {
 });
 
 Route::post('/jobs', function () {
+    request()->validate([
+        'title' => ['required', 'min:3'],
+        'salary' => ['required', 'numeric'],
+    ]);
+
     Job::create([
         'title' => request()->title,
         'salary' => request()->salary,
