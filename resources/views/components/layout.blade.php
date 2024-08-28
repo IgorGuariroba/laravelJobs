@@ -21,7 +21,7 @@
                             <x-nav_link href="/" :active="request()->is('/')">Home</x-nav_link>
                             <x-nav_link href="/contact" :active="request()->is('contact')">Contato</x-nav_link>
                             <x-nav_link href="/about" :active="request()->is('about')">Sobre</x-nav_link>
-                            <x-nav_link href="/jobs" :active="request()->is('about')">Jobs</x-nav_link>
+                            <x-nav_link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav_link>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                 <x-nav_link href="/" :active="request()->is('/')">Home</x-nav_link>
                 <x-nav_link href="/contact" :active="request()->is('contact')">Contato</x-nav_link>
                 <x-nav_link href="/about" :active="request()->is('about')">Sobre</x-nav_link>
-                <x-nav_link href="/jobs" :active="request()->is('about')">Jobs</x-nav_link>
+                <x-nav_link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav_link>
             </div>
             <div class="border-t border-gray-700 pb-3 pt-4">
                 <div class="flex items-center px-5">
