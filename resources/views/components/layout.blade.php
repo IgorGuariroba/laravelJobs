@@ -28,9 +28,16 @@
                 <div class="hidden md:block">
                     <div class="ml-4 flex items-center md:ml-6">
                         @guest
-                            <x-nav_link href="/login" :active="request()->is('login')">Login</x-nav_link>
+                            <x-nav_link href="/login" :active="request()->is('login')">Entrar</x-nav_link>
                             <x-nav_link href="/register" :active="request()->is('register')">Cadastro</x-nav_link>
                         @endguest
+
+                        @auth
+                            <form method="POST" action="/logout">
+                                @csrf
+                                <x-form-button>Sair</x-form-button>
+                            </form>
+                        @endauth
                     </div>
                 </div>
                 <div class="-mr-2 flex md:hidden">
