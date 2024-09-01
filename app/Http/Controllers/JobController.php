@@ -39,7 +39,7 @@ class JobController extends Controller
         Job::create([
             'title' => request()->title,
             'salary' => request()->salary,
-            'employer_id' => 1,
+            'employer_id' => Auth::user()->employer->id,
         ]);
 
         return redirect('/jobs');

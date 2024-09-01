@@ -6,7 +6,7 @@
     <h2 class="font-bold text-lg">{{$job->title}}</h2>
     <p>Este trabalho paga {{$job->salary}} por ano.</p>
 
-    @can('edit-job',$job)
+    @can('edit',$job)
         <p class="mt-6">
             <x-button href="/jobs/{{$job->id}}/edit">
                 Editar o cargo
